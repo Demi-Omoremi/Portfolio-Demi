@@ -92,19 +92,28 @@
   /**
    * Init typed.js
    */
-  const selectTyped = document.querySelector('.typed');
-  if (selectTyped) {
-    let typed_strings = selectTyped.getAttribute('data-typed-items');
-    typed_strings = typed_strings.split(',');
+const selectTyped = document.querySelector('.typed');
+if (selectTyped) {
+  let typed_strings = selectTyped.getAttribute('data-typed-items');
+  if (typed_strings) {
+    typed_strings = typed_strings.split(',').map(str => str.trim());
+    
+    // Add the first string to the end to force proper backspacing
+    const stringsWithLoop = [...typed_strings, typed_strings[0]];
+    
     new Typed('.typed', {
-      strings: typed_strings,
+      strings: stringsWithLoop,
       loop: true,
       typeSpeed: 100,
       backSpeed: 50,
-      backDelay: 2000
-      
+      backDelay: 2000,
+      // These options ensure proper backspacing behavior
+      smartBackspace: false,  // Don't skip common parts
+      shuffle: false,         // Keep order intact
+      loopCount: Infinity
     });
   }
+}
 
   /**
    * Initiate Pure Counter

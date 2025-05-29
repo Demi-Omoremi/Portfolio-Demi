@@ -12,7 +12,7 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --default-font: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Raleway",  sans-serif;
   --nav-font: "Poppins",  sans-serif;
 }
@@ -84,7 +84,13 @@ h4,
 h5,
 h6 {
   color: var(--heading-color);
-  font-family: var(--heading-font);
+  font-family: var(--default-font);
+}
+
+h2.alt-heading {
+  color: var(--heading-color);
+  font-family: var(--default-font);
+  text-align: center;
 }
 
 /* PHP Email Form Messages
@@ -268,7 +274,7 @@ h6 {
 .navmenu a:focus {
   color: var(--nav-color);
   padding: 15px 10px;
-  font-family: var(--nav-font);
+  font-family: var(--default-font);
   font-size: 16px;
   font-weight: 400;
   display: flex;
@@ -541,6 +547,14 @@ section,
   position: relative;
 }
 
+.section-title-alt h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
 .section-title h2:after {
   content: "";
   position: absolute;
@@ -695,7 +709,7 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 40%);
   padding: 15px 0 0 0;
   margin: 0 0 0 60px;
-  font-family: var(--heading-font);
+  font-family: var(--default-font);
   font-size: 14px;
 }
 
@@ -1379,5 +1393,69 @@ section,
 .badge-docker { background-color: #2496ed; color: #fff; }
 .badge-aws { background-color: #232f3e; color: #fff; }
 
+/**
+SKILLS
+*/
+.tech-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .tech-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
 
 
+
+        .tech-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .tech-icon:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .tech-icon svg {
+            width: 35px;
+            height: 35px;
+        }
+
+
+        .tech-name {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin: 0;
+        }
+
+
+
+        @media (max-width: 768px) {
+            .tech-grid {
+                gap: 0px;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
