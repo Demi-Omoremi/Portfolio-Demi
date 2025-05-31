@@ -88,9 +88,12 @@ h6 {
 }
 
 h2.alt-heading {
-  color: var(--heading-color);
-  font-family: var(--default-font);
+  color: #2c3e50;
+  font-size: 2.5rem;
+  margin: 0 0 10px 0;
+  font-weight: 700;
   text-align: center;
+  
 }
 
 /* PHP Email Form Messages
@@ -540,12 +543,14 @@ section,
 }
 
 .section-title h2 {
-  font-size: 32px;
+  font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
 }
+
+
 
 .section-title-alt h2 {
   font-size: 32px;
@@ -556,14 +561,14 @@ section,
 }
 
 .section-title h2:after {
-  content: "";
+  /* content: "";
   position: absolute;
   display: block;
   width: 1300px;
   height: 3px;
   background: var(--accent-color);
   left: 0;
-  bottom: 0;
+  bottom: 0; */
 }
 
 .section-title p {
@@ -611,6 +616,7 @@ section,
   margin: 0;
   font-size: 64px;
   font-weight: 700;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
 }
 
 .hero p {
@@ -634,6 +640,22 @@ section,
   line-height: 1;
   margin-right: 20px;
   transition: 0.3s;
+}
+
+.hero .button {
+    color: var(--contrast-color);
+    background: var(--accent-color);
+    border: 0;
+    padding: 10px 30px;
+    transition: 0.4s;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.hero .button:hover {
+    opacity: 0.9;
+    transform: scale(1.03);
 }
 
 .hero .social-links a:hover {
@@ -1411,24 +1433,27 @@ SKILLS
             text-align: center;
         }
 
-
-
         .tech-icon {
             width: 60px;
             height: 60px;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 12px;
+            border-radius: 50%;
             margin-bottom: 12px;
             transition: all 0.3s ease;
-            cursor: pointer;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+            /* border: 2px solid var(--accent-color); */
         }
 
-        .tech-icon:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        .tech-item:hover .tech-icon {
+            border: 2px solid var(--accent-color);
+              transform: scale(1.1);
+              box-shadow: 0 0 10px #3b82f6;
+        }
+
+        .tech-item:hover .tech-name {
+              transform: scale(1.1);
         }
 
         .tech-icon svg {
@@ -1460,8 +1485,15 @@ SKILLS
             }
         }
 
+        .tech-desc h2 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin: 0 0 10px 0;
+            font-weight: 700;
+        }
         .tech-desc p {
             color: #7f8c8d;
             font-size: 1.1rem;
             margin: 0;
         }
+
