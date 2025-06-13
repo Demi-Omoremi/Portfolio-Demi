@@ -20,16 +20,32 @@
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #272829; /* Default color used for the majority of the text content across the entire website */
+  --default-color: #0F172A; /* Default color used for the majority of the text content across the entire website */
+  
   --heading-color: #050d18; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #3770ff; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #2563EB; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  
+  
+  --hero-background-color: #040b14;
+  --hero-text-color: #ffffff;
+
+
+  --contact-box: #ffffff;
+  
+  --card-body: white;
+  --card-button: var(--accent-color);
+
+
+  --alt-background: #F1F5F9;
+  --background: white;
+  --text: #0F172A;
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #a8a9b4;  /* The default color of the main navmenu links */
+  --nav-color: #000000;  /* The default color of the main navmenu links */
   --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #040b14; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #040b14; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
@@ -37,19 +53,52 @@
   --nav-dropdown-hover-color: #ffffff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
+
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #f4fafd;
+  --background-color: #FDF8F5;
   --surface-color: #ffffff;
-}
-
-.dark-background {
-  --background-color: #040b14;
   --default-color: #ffffff;
   --heading-color: #ffffff;
-  --surface-color: #151f2b;
   --contrast-color: #ffffff;
+  --text: #84ff00;
+  --background: #eef3ed;
+  --primary: #42543b;
+  --secondary: #9cbaa5;
+  --accent-color: #5e876f;
+  
+
+}
+
+
+
+[data-theme="dark"] {
+  --background-color: #1A1F19;
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  --surface-color: #60ff04;
+  --contrast-color: #F8FAFC;
+
+
+
+  --text: #F8FAFC;
+  --background: #0B1426;
+  --alt-background: #1E293B;
+
+
+  --primary: #b2c4ab;
+  --secondary: #45634e;
+  --accent-color: #3B82F6;
+  --contact-box:hsl(108, 20%, 95%, 5%);
+  
+
+
+
+  --card-body: hsl(108, 20%, 95%, 5%);
+  --card-button: var(--accent-color);
+
+  
 }
 
 /* Smooth scroll */
@@ -62,7 +111,7 @@
 --------------------------------------------------------------*/
 body {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: var(--background);
   font-family: var(--default-font);
 }
 
@@ -83,12 +132,12 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--heading-color);
+  color: var(--text);
   font-family: var(--default-font);
 }
 
 h2.alt-heading {
-  color: #2c3e50;
+  color: var(--text);
   font-size: 2.5rem;
   margin: 0 0 10px 0;
   font-weight: 700;
@@ -153,7 +202,7 @@ h2.alt-heading {
 --------------------------------------------------------------*/
 .header {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: var(--nav-color);
   position: fixed;
   top: 0;
   left: 0;
@@ -170,7 +219,7 @@ h2.alt-heading {
   margin: 15px auto;
   display: block;
   width: 112px;
-  border: 8px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  border: 8px solid color-mix(in srgb, var(--nav-hover-color), transparent 85%);
 }
 
 .header .logo {
@@ -187,7 +236,7 @@ h2.alt-heading {
   font-size: 24px;
   margin: 0;
   font-weight: 700;
-  color: var(--heading-color);
+  color: var(--nav-hover-color);
 }
 
 .header .social-links {
@@ -199,8 +248,9 @@ h2.alt-heading {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: color-mix(in srgb, var(--default-color), transparent 90%);
-  color: var(--default-color);
+  background: color-mix(in srgb, var(--nav-hover-color), transparent 90%);
+  color: var(--nav-hover-color);
+  
   margin: 0 2px;
   border-radius: 50%;
   text-align: center;
@@ -275,7 +325,7 @@ h2.alt-heading {
 
 .navmenu a,
 .navmenu a:focus {
-  color: var(--nav-color);
+  color: var(--nav-dropdown-color);
   padding: 15px 10px;
   font-family: var(--default-font);
   font-size: 16px;
@@ -375,7 +425,7 @@ h2.alt-heading {
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: var(--alt-background);
   font-size: 14px;
   padding: 40px 0;
   position: relative;
@@ -529,9 +579,15 @@ h2.alt-heading {
 section,
 .section {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: var(--background);
   padding: 60px 0;
   overflow: clip;
+}
+
+
+
+.alt-section {
+  background-color: var(--alt-background);
 }
 
 /*--------------------------------------------------------------
@@ -601,7 +657,7 @@ section,
 
 .hero:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 70%);
+  background: color-mix(in srgb, var(--hero-background-color), transparent 70%);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -617,6 +673,7 @@ section,
   font-size: 64px;
   font-weight: 700;
   text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+  color: var(--hero-text-color);
 }
 
 .hero p {
@@ -834,6 +891,11 @@ section,
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
+
+.portfolio {
+
+}
+
 .portfolio .portfolio-filters {
   padding: 0;
   margin: 0 auto 20px auto;
@@ -1098,7 +1160,7 @@ section,
 # Contact Section
 --------------------------------------------------------------*/
 .contact .info-wrap {
-  background-color: var(--surface-color);
+  background-color: var(--contact-box);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   padding: 30px;
 }
@@ -1140,13 +1202,13 @@ section,
   font-size: 14px;
 }
 
-.contact .info-item:hover i {
+.contact .info-item i:hover {
   background: var(--accent-color);
   color: var(--contrast-color);
 }
 
 .contact .php-email-form {
-  background-color: var(--surface-color);
+  background-color: var(--contact-box);
   height: 100%;
   padding: 30px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
@@ -1166,7 +1228,7 @@ section,
   box-shadow: none;
   border-radius: 0;
   color: var(--default-color);
-  background-color: var(--surface-color);
+  background-color: var(--contact-box);
   border-color: color-mix(in srgb, var(--default-color), transparent 80%);
 }
 
@@ -1328,14 +1390,40 @@ section,
   /* Add your styles here */
 }
 
-.btn-outline-custom {
-  color: rgb(0, 0, 0);
-  border-color: rgb(0, 0, 0);
+/* Force rounded buttons with high specificity */
+.btn.btn-sm.rounded-pill.custom-solid-btn,
+.btn.btn-sm.custom-solid-btn.rounded-pill {
+  background-color: var(--accent-color) !important;
+  color: white !important;
+  border-radius: 50px !important;
+  border: 2px solid var(--accent-color) !important;
 }
 
-.btn-outline-custom:hover {
-  background-color: red;
-  color: white;
+.btn.btn-sm.rounded-pill.custom-solid-btn:hover,
+.btn.btn-sm.custom-solid-btn.rounded-pill:hover {
+  background-color: var(--accent-color) !important;
+  color: white !important;
+  border-radius: 50px !important;
+}
+
+/* Target your specific outline button classes with high specificity */
+.btn.btn-sm.btn-outline-danger.rounded-pill,
+.btn.btn-sm.btn-outline-secondary.rounded-pill {
+  border-radius: 50px !important;
+  border-width: 1px !important;
+  border-color: var(--accent-color);
+  color: #3B82F6;
+  background-color: var(--card-body);
+}
+
+.btn.btn-sm.btn-outline-danger.rounded-pill:hover,
+.btn.btn-sm.btn-outline-secondary.rounded-pill:hover {
+  border-radius: 500px !important;
+}
+
+/* Alternative approach - force ALL buttons in your cards to be rounded */
+.card .btn {
+  border-radius: 50px !important;
 }
 
 .card {
@@ -1343,16 +1431,16 @@ section,
     border: none;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     overflow: hidden;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: var(--card-body);
 }
 
 .card-body {
-    background: rgba(255, 255, 255, 0.95);
+    background: var(--card-body);
     backdrop-filter: blur(10px);
 }
 
 .card-text {
-    color: #333;
+    color: var(--text);
 }
 
 .card:hover {
@@ -1419,81 +1507,150 @@ section,
 SKILLS
 */
 .tech-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 40px;
-            margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.tech-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+  /* border: 2px solid var(--accent-color); */
+}
+
+.tech-item:hover .tech-icon {
+  border: 2px solid var(--accent-color);
+    transform: scale(1.1);
+    box-shadow: 0 0 10px var(--accent-color);
+}
+
+.tech-item:hover .tech-name {
+    transform: scale(1.1);
+}
+
+.tech-icon svg {
+  width: 35px;
+  height: 35px;
+}
+
+
+.tech-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0;
+}
+
+
+
+@media (max-width: 768px) {
+  .tech-grid {
+      gap: 0px;
+  }
+  
+  .container {
+      padding: 20px;
+  }
+  
+  .header h1 {
+      font-size: 2rem;
+      color: var(--nav-hover-color);
+  }
+}
+
+.tech-desc h2 {
+  color: var(--text);
+  font-size: 2.5rem;
+  margin: 0 0 10px 0;
+  font-weight: 700;
+}
+.tech-desc p {
+  color: var(--text);
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 1000;
+            padding: 0;
         }
 
-        .tech-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-        .tech-icon {
-            width: 60px;
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            margin-bottom: 12px;
+        .toggle-slider {
+            width: 80px;
+            height: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            position: relative;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-            /* border: 2px solid var(--accent-color); */
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
         }
 
-        .tech-item:hover .tech-icon {
-            border: 2px solid var(--accent-color);
-              transform: scale(1.1);
-              box-shadow: 0 0 10px #3b82f6;
+        .toggle-circle {
+            width: 32px;
+            height: 32px;
+            background: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
         }
 
-        .tech-item:hover .tech-name {
-              transform: scale(1.1);
+        .toggle-stars {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            color: white;
+            font-size: 12px;
+            opacity: 1;
+            transition: opacity 0.3s ease;
         }
 
-        .tech-icon svg {
-            width: 35px;
-            height: 35px;
+        [data-theme="light"] .toggle-slider {
+            background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+            box-shadow: 0 4px 15px rgba(255, 171, 160, 0.4);
         }
 
-
-        .tech-name {
-            font-size: 1rem;
-            font-weight: 600;
-            color: #2c3e50;
-            margin: 0;
+        [data-theme="light"] .toggle-circle {
+            transform: translateX(40px);
         }
 
-
-
-        @media (max-width: 768px) {
-            .tech-grid {
-                gap: 0px;
-            }
-            
-            .container {
-                padding: 20px;
-            }
-            
-            .header h1 {
-                font-size: 2rem;
-            }
+        [data-theme="light"] .toggle-stars {
+            opacity: 0;
         }
 
-        .tech-desc h2 {
-            color: #2c3e50;
-            font-size: 2.5rem;
-            margin: 0 0 10px 0;
-            font-weight: 700;
+        .theme-toggle:hover .toggle-slider {
+            transform: scale(1.05);
         }
-        .tech-desc p {
-            color: #7f8c8d;
-            font-size: 1.1rem;
-            margin: 0;
+
+        .theme-toggle:active .toggle-slider {
+            transform: scale(0.95);
         }
 
