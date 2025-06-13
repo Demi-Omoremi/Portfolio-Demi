@@ -98,16 +98,13 @@ if (selectTyped) {
   if (typed_strings) {
     typed_strings = typed_strings.split(',').map(str => str.trim());
     
-    // Add the first string to the end to force proper backspacing
-    const stringsWithLoop = [...typed_strings, typed_strings[0]];
-    
+    // Don't add the first string to the end - Typed.js handles looping automatically
     new Typed('.typed', {
-      strings: stringsWithLoop,
+      strings: typed_strings,  // Use original array without modification
       loop: true,
       typeSpeed: 100,
       backSpeed: 50,
       backDelay: 2000,
-      // These options ensure proper backspacing behavior
       smartBackspace: false,  // Don't skip common parts
       shuffle: false,         // Keep order intact
       loopCount: Infinity
@@ -237,3 +234,72 @@ if (selectTyped) {
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+class ThemeToggle {
+            constructor() {
+                this.toggle = document.getElementById('themeToggle');
+                this.status = document.getElementById('status');
+                this.currentTheme = 'light';
+                
+                this.init();
+            }
+
+            init() {
+                // Load saved theme or default to light
+                this.loadTheme();
+                
+                // Add event listener
+                this.toggle.addEventListener('click', () => this.switchTheme());
+                
+                // Add keyboard support
+                this.toggle.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        this.switchTheme();
+                    }
+                });
+            }
+
+            loadTheme() {
+                // Since we can't use localStorage, we'll start with light theme
+                // In a real application, you would load from localStorage here
+                this.setTheme('light');
+            }
+
+            switchTheme() {
+                const newTheme = this.currentTheme === 'light' ? 'dark' : 'light';
+                this.setTheme(newTheme);
+                this.showStatus(`Switched to ${newTheme} mode`);
+            }
+
+            setTheme(theme) {
+                this.currentTheme = theme;
+                document.documentElement.setAttribute('data-theme', theme);
+                
+                // Update toggle icon
+                const circle = document.getElementById('toggleCircle');
+                circle.textContent = theme === 'light' ? '☀️' : '🌙';
+                this.toggle.setAttribute('aria-label', 
+                    `Switch to ${theme === 'light' ? 'dark' : 'light'} mode`);
+                
+                // In a real application, you would save to localStorage here:
+                // localStorage.setItem('theme', theme);
+            }
+
+            showStatus(message) {
+                this.status.textContent = message;
+                this.status.classList.add('show');
+                
+                setTimeout(() => {
+                    this.status.classList.remove('show');
+                }, 2000);
+            }
+        }
+
+        // Initialize the theme toggle when the page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            new ThemeToggle();
+        });
+
+
+

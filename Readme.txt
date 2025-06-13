@@ -1,6 +1,21 @@
-Thanks for downloading this template!
+# Demi Omoremi - Portfolio Website
 
-Template Name: iPortfolio
-Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-Author: BootstrapMade.com
-License: https://bootstrapmade.com/license/
+Welcome to my personal developer portfolio!  
+This site showcases my projects, skills, and contact information in a clean, responsive layout.
+
+## 🚀 Features
+
+- 💼 Project showcase section
+- 🧠 Tech stack highlights
+- 📱 Fully responsive design
+- 🌗 Light/Dark mode toggle
+- 📬 Contact form powered by Formspree
+- 🔗 Social links (GitHub, LinkedIn, Handshake, Email)
+
+## 🛠️ Built With
+
+- HTML5 & CSS3
+- Bootstrap 5
+- JavaScript
+- AOS (Animate On Scroll)
+- Formspree (for contact form handling)

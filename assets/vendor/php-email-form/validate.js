@@ -1,5 +1,5 @@
 /**
-* PHP Email Form Validation - v3.9
+* PHP Email Form Validation - v3.9 (Formspree Compatible)
 * URL: https://bootstrapmade.com/php-email-form/
 * Author: BootstrapMade.com
 */
@@ -10,12 +10,59 @@
 
   forms.forEach( function(e) {
     e.addEventListener('submit', function(event) {
-      event.preventDefault();
-
       let thisForm = this;
-
       let action = thisForm.getAttribute('action');
       let recaptcha = thisForm.getAttribute('data-recaptcha-site-key');
+      
+      // Check if this is a Formspree form (contains formspree.io in action)
+      if (action && action.includes('formspree.io')) {
+        // For Formspree, we can either allow natural submission or handle via AJAX
+        // Let's handle via AJAX to maintain the UI feedback
+        event.preventDefault();
+        
+        if( ! action ) {
+          displayError(thisForm, 'The form action property is not set!');
+          return;
+        }
+        
+        thisForm.querySelector('.loading').classList.add('d-block');
+        thisForm.querySelector('.error-message').classList.remove('d-block');
+        thisForm.querySelector('.sent-message').classList.remove('d-block');
+
+        let formData = new FormData(thisForm);
+        
+        // Submit to Formspree via AJAX
+        fetch(action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        })
+        .then(response => {
+          thisForm.querySelector('.loading').classList.remove('d-block');
+          if (response.ok) {
+            thisForm.querySelector('.sent-message').classList.add('d-block');
+            thisForm.reset();
+          } else {
+            return response.json().then(data => {
+              if (data.errors) {
+                throw new Error(data.errors.map(error => error.message).join(', '));
+              } else {
+                throw new Error('Form submission failed');
+              }
+            });
+          }
+        })
+        .catch(error => {
+          displayError(thisForm, error.message || 'Form submission failed');
+        });
+        
+        return;
+      }
+      
+      // For non-Formspree forms, use the original AJAX logic
+      event.preventDefault();
       
       if( ! action ) {
         displayError(thisForm, 'The form action property is not set!');
