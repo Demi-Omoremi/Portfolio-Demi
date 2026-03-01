@@ -41,6 +41,8 @@
   --alt-background: #F1F5F9;
   --background: white;
   --text: #0F172A;
+
+  --project-text-color: var(--bs-secondary-color);
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -79,6 +81,7 @@
   --heading-color: #ffffff;
   --surface-color: #60ff04;
   --contrast-color: #F8FAFC;
+  --project-text-color: #ffffff;
 
 
 
@@ -1489,19 +1492,87 @@ section,
     border: none;
 }
 
-/* Technology-specific badge colors */
-.badge-react { background-color: #61dafb; color: #000; }
-.badge-node { background-color: #68a063; color: #fff; }
-.badge-mongodb { background-color: #47a248; color: #fff; }
-.badge-laravel { background-color: #ff2d20; color: #fff; }
-.badge-php { background-color: #777bb4; color: #fff; }
-.badge-javascript { background-color: #f7df1e; color: #000; }
-.badge-typescript { background-color: #3178c6; color: #fff; }
-.badge-python { background-color: #306998; color: #fff; }
-.badge-mysql { background-color: #4479a1; color: #fff; }
-.badge-postgresql { background-color: #336791; color: #fff; }
-.badge-docker { background-color: #2496ed; color: #fff; }
-.badge-aws { background-color: #232f3e; color: #fff; }
+/* Light Mode - Modern, clean with subtle gradients feel */
+.badge-react { background-color: #dbeafe; color: #1e40af; }
+.badge-nextjs { background-color: #f1f5f9; color: #0f172a; }
+.badge-node { background-color: #dcfce7; color: #15803d; }
+.badge-javascript { background-color: #fef3c7; color: #92400e; }
+.badge-typescript { background-color: #dbeafe; color: #1e3a8a; }
+.badge-python { background-color: #e0f2fe; color: #075985; }
+.badge-php { background-color: #f3e8ff; color: #6b21a8; }
+.badge-laravel { background-color: #fee2e2; color: #991b1b; }
+.badge-fastapi { background-color: #d1fae5; color: #065f46; }
+.badge-flask { background-color: #f5f5f4; color: #292524; }
+.badge-mongodb { background-color: #d1fae5; color: #14532d; }
+.badge-mysql { background-color: #dbeafe; color: #1e3a8a; }
+.badge-postgresql { background-color: #e0e7ff; color: #3730a3; }
+.badge-docker { background-color: #cffafe; color: #155e75; }
+.badge-aws { background-color: #fed7aa; color: #9a3412; }
+.badge-swift { background-color: #ffe4e6; color: #9f1239; }
+.badge-swiftui { background-color: #dbeafe; color: #1e40af; }
+.badge-coredata { background-color: #f1f5f9; color: #334155; }
+.badge-pytorch { background-color: #fed7aa; color: #9a3412; }
+.badge-transformers { background-color: #fef08a; color: #854d0e; }
+.badge-lora { background-color: #f3e8ff; color: #7e22ce; }
+.badge-peft { background-color: #e9d5ff; color: #6b21a8; }
+.badge-cesiumjs { background-color: #e2e8f0; color: #1e293b; }
+.badge-ocr { background-color: #e5e7eb; color: #374151; }
+
+/* Dark Mode - Modern, vibrant with strong contrast */
+@media (prefers-color-scheme: dark) {
+  .badge-react { background-color: #1e3a8a; color: #93c5fd; }
+  .badge-nextjs { background-color: #0f172a; color: #f1f5f9; }
+  .badge-node { background-color: #14532d; color: #86efac; }
+  .badge-javascript { background-color: #78350f; color: #fde047; }
+  .badge-typescript { background-color: #1e3a8a; color: #93c5fd; }
+  .badge-python { background-color: #0c4a6e; color: #7dd3fc; }
+  .badge-php { background-color: #581c87; color: #d8b4fe; }
+  .badge-laravel { background-color: #7f1d1d; color: #fca5a5; }
+  .badge-fastapi { background-color: #064e3b; color: #6ee7b7; }
+  .badge-flask { background-color: #1c1917; color: #e7e5e4; }
+  .badge-mongodb { background-color: #14532d; color: #4ade80; }
+  .badge-mysql { background-color: #1e3a8a; color: #93c5fd; }
+  .badge-postgresql { background-color: #312e81; color: #a5b4fc; }
+  .badge-docker { background-color: #164e63; color: #67e8f9; }
+  .badge-aws { background-color: #7c2d12; color: #fed7aa; }
+  .badge-swift { background-color: #881337; color: #fda4af; }
+  .badge-swiftui { background-color: #1e40af; color: #93c5fd; }
+  .badge-coredata { background-color: #334155; color: #cbd5e1; }
+  .badge-pytorch { background-color: #9a3412; color: #fdba74; }
+  .badge-transformers { background-color: #713f12; color: #fde047; }
+  .badge-lora { background-color: #6b21a8; color: #e9d5ff; }
+  .badge-peft { background-color: #581c87; color: #d8b4fe; }
+  .badge-cesiumjs { background-color: #1e293b; color: #cbd5e1; }
+  .badge-ocr { background-color: #374151; color: #d1d5db; }
+}
+
+/* Manual dark mode class */
+.dark .badge-react { background-color: #1e3a8a; color: #93c5fd; }
+.dark .badge-nextjs { background-color: #0f172a; color: #f1f5f9; }
+.dark .badge-node { background-color: #14532d; color: #86efac; }
+.dark .badge-javascript { background-color: #78350f; color: #fde047; }
+.dark .badge-typescript { background-color: #1e3a8a; color: #93c5fd; }
+.dark .badge-python { background-color: #0c4a6e; color: #7dd3fc; }
+.dark .badge-php { background-color: #581c87; color: #d8b4fe; }
+.dark .badge-laravel { background-color: #7f1d1d; color: #fca5a5; }
+.dark .badge-fastapi { background-color: #064e3b; color: #6ee7b7; }
+.dark .badge-flask { background-color: #1c1917; color: #e7e5e4; }
+.dark .badge-mongodb { background-color: #14532d; color: #4ade80; }
+.dark .badge-mysql { background-color: #1e3a8a; color: #93c5fd; }
+.dark .badge-postgresql { background-color: #312e81; color: #a5b4fc; }
+.dark .badge-docker { background-color: #164e63; color: #67e8f9; }
+.dark .badge-aws { background-color: #7c2d12; color: #fed7aa; }
+.dark .badge-swift { background-color: #881337; color: #fda4af; }
+.dark .badge-swiftui { background-color: #1e40af; color: #93c5fd; }
+.dark .badge-coredata { background-color: #334155; color: #cbd5e1; }
+.dark .badge-pytorch { background-color: #9a3412; color: #fdba74; }
+.dark .badge-transformers { background-color: #713f12; color: #fde047; }
+.dark .badge-lora { background-color: #6b21a8; color: #e9d5ff; }
+.dark .badge-peft { background-color: #581c87; color: #d8b4fe; }
+.dark .badge-cesiumjs { background-color: #1e293b; color: #cbd5e1; }
+.dark .badge-ocr { background-color: #374151; color: #d1d5db; }
+
+
 
 /**
 SKILLS
