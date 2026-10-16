@@ -1,0 +1,128 @@
+{
+  "source": "https://svgl.app/",
+  "skills": [
+    {
+      "skill": "Java",
+      "svgl_title": "Java",
+      "route": "https://svgl.app/library/java.svg",
+      "website": "https://www.java.com/"
+    },
+    {
+      "skill": "Python",
+      "svgl_title": "Python",
+      "route": "https://svgl.app/library/python.svg",
+      "website": "https://www.python.org/"
+    },
+    {
+      "skill": "TypeScript",
+      "svgl_title": "TypeScript",
+      "route": "https://svgl.app/library/typescript.svg",
+      "website": "https://www.typescriptlang.org"
+    },
+    {
+      "skill": "JavaScript",
+      "svgl_title": "JavaScript",
+      "route": "https://svgl.app/library/javascript.svg",
+      "website": "https://developer.mozilla.org/docs/Web/JavaScript"
+    },
+    {
+      "skill": "C",
+      "svgl_title": "C",
+      "route": "https://svgl.app/library/c.svg",
+      "website": "https://en.wikipedia.org/wiki/C_(programming_language)"
+    },
+    {
+      "skill": "React",
+      "svgl_title": "React",
+      "route": {
+        "light": "https://svgl.app/library/react_light.svg",
+        "dark": "https://svgl.app/library/react_dark.svg"
+      },
+      "website": "https://react.dev/"
+    },
+    {
+      "skill": "Next.js",
+      "svgl_title": "Next.js",
+      "route": "https://svgl.app/library/nextjs_icon_dark.svg",
+      "website": "https://nextjs.org/"
+    },
+    {
+      "skill": "Spring Boot",
+      "svgl_title": "Spring",
+      "route": "https://svgl.app/library/spring.svg",
+      "website": "https://spring.io/"
+    },
+    {
+      "skill": "FastAPI",
+      "svgl_title": "FastAPI",
+      "route": "https://svgl.app/library/fastapi.svg",
+      "website": "https://fastapi.tiangolo.com/"
+    },
+    {
+      "skill": "Flask",
+      "svgl_title": "Flask",
+      "route": {
+        "light": "https://svgl.app/library/flask-light.svg",
+        "dark": "https://svgl.app/library/flask-dark.svg"
+      },
+      "website": "https://flask.palletsprojects.com/"
+    },
+    {
+      "skill": "Node.js",
+      "svgl_title": "Node.js",
+      "route": "https://svgl.app/library/nodejs.svg",
+      "website": "https://nodejs.org/"
+    },
+    {
+      "skill": "Kafka",
+      "svgl_title": "Apache Kafka",
+      "route": {
+        "light": "https://svgl.app/library/apache-kafka-light.svg",
+        "dark": "https://svgl.app/library/apache-kafka-dark.svg"
+      },
+      "website": "https://kafka.apache.org/"
+    },
+    {
+      "skill": "PostgreSQL",
+      "svgl_title": "PostgreSQL",
+      "route": "https://svgl.app/library/postgresql.svg",
+      "website": "https://www.postgresql.org/"
+    },
+    {
+      "skill": "MySQL",
+      "svgl_title": "MySQL",
+      "route": {
+        "light": "https://svgl.app/library/mysql-icon-light.svg",
+        "dark": "https://svgl.app/library/mysql-icon-dark.svg"
+      },
+      "website": "https://www.mysql.com"
+    },
+    {
+      "skill": "Docker",
+      "svgl_title": "Docker",
+      "route": "https://svgl.app/library/docker.svg",
+      "website": "https://www.docker.com/"
+    },
+    {
+      "skill": "AWS",
+      "svgl_title": "Amazon Web Services",
+      "route": {
+        "light": "https://svgl.app/library/aws_light.svg",
+        "dark": "https://svgl.app/library/aws_dark.svg"
+      },
+      "website": "https://aws.amazon.com/"
+    },
+    {
+      "skill": "Git",
+      "svgl_title": "Git",
+      "route": "https://svgl.app/library/git.svg",
+      "website": "https://git-scm.com/"
+    },
+    {
+      "skill": "Hugging Face",
+      "svgl_title": "Hugging Face",
+      "route": "https://svgl.app/library/hugging_face.svg",
+      "website": "https://huggingface.co/"
+    }
+  ]
+}

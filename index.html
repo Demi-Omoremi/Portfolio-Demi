@@ -1,514 +1,141 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Demi Omoremi | Software Developer</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="assets/img/myLogo.png" rel="icon">
-  <link href="assets/img/myLogo.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: iPortfolio
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Updated: Jun 29 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Demi Omoremi, software engineer and Virginia Tech Computer Science graduate. Explore full-stack applications, real-time backend systems, and machine learning projects.">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:title" content="Demi Omoremi | Software Engineer">
+  <meta property="og:description" content="Full-stack applications, real-time backend systems, and applied machine learning.">
+  <meta property="og:type" content="website">
+  <title>Demi Omoremi | Software Engineer</title>
+  <link rel="icon" href="assets/demi-omoremi.png" type="image/png" sizes="400x400">
+  <link rel="preload" href="assets/Ubuntu-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <script>try{const t=localStorage.getItem('demi-theme');document.documentElement.classList.toggle('dark',t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches))}catch{}</script>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-8H9v8H4a1 1 0 0 1-1-1Z"/></symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24"><path d="M20 20H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2Z"/><path d="m10 11-3 3 3 3m4-6 3 3-3 3"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-4.3 1.3-4.3-2.2-6-2.7M15 22v-3.8c0-1 .1-1.5-.5-2 3.3-.4 6.8-1.7 6.8-7.3a5.7 5.7 0 0 0-1.5-4 5.3 5.3 0 0 0-.1-4S18.4.5 15 2.4a13.8 13.8 0 0 0-7 0C4.6.5 3.3.9 3.3.9a5.3 5.3 0 0 0-.1 4 5.7 5.7 0 0 0-1.5 4c0 5.6 3.5 6.9 6.8 7.3-.5.5-.6 1.1-.5 2V22" transform="translate(1 1) scale(.9)"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 10v7m0-10v.01M11 17v-7m0 3a3 3 0 0 1 6 0v4"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M15 3h6v6m0-6L10 14m0-11H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Zm0 0v6h6M8 13h8m-8 4h6"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4Zm0 0L11 13"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+  </svg>
 
-<body class="index-page">
-
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
-        <div class="toggle-slider">
-            <div class="toggle-circle" id="toggleCircle">🌙</div>
-            <div class="toggle-stars">✨</div>
-        </div>
-    </button>
-
-
-
-  <header id="header" class="header dark-background d-flex flex-column">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
-
-    <div class="profile-img">
-      <img src="assets/img/profilepic.jpg" alt="" class="img-fluid rounded-circle">
-    </div>
-
-    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-      <!-- Uncomment the line below if you also wish to use an image logo -->
-      <!-- <img src="assets/img/logo.png" alt=""> -->
-      <h1 class="sitename">Demi Omoremi</h1>
-    </a>
-
-    <div class="social-links text-center">
-      <a href="https://github.com/Demi-Omoremi" class="github" target="_blank"><i class="bi bi-github"></i></a>
-      <a href="https://www.linkedin.com/in/demi-omoremi-201661367/" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
-      <a href="mailto:demiomoremi@gmail.com" class="Email"><i class="bi bi-envelope"></i></a>
-
-    </div>
-
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
-        <!-- <li><a href="#skills"><i class="bi bi-tools navicon"></i> Skills</a></li>  -->
-
-        <!-- portfolio changed to projects -->
-        <li><a href="#portfolio"><i class="bi bi-code-slash navicon"></i> Projects</a></li>
-        <!-- <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li> -->
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
-      </ul>
-    </nav>
-
-  </header>
-
-  <main class="main">
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
-      
-
- 
-
-      <img src="assets/img/hometown.jpg" alt=""  class="">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <h2 class="text-left">Hi, I'm Demi Omoremi<h2>
-        <p>A <span class="typed" data-typed-items="Programmer, Problem Solver, CS Student at Virginia Tech"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
-
-
+  <main id="main">
+    <section id="hero" class="reveal" aria-labelledby="intro-title">
+      <div class="hero-copy">
+        <h1 id="intro-title">Hi, I'm <span class="name-accent">Demi</span> <span class="wave" role="img" aria-label="waving hand">👋</span></h1>
+        <p class="intro">Software Engineer. I build full-stack applications and backend systems with a focus on reliability and real-time data. <a class="inline-link" href="#projects">See my projects <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
       </div>
-      
+      <img class="avatar" src="assets/demi-omoremi.png" alt="Demi Omoremi" width="400" height="400" fetchpriority="high" decoding="async">
+    </section>
 
-    </section><!-- /Hero Section -->
+    <section id="about" class="reveal" aria-labelledby="about-title">
+      <h2 id="about-title">About Me</h2>
+      <p class="muted-copy">I'm a software engineer with a <strong>Bachelor of Science in Computer Science from Virginia Tech</strong>. I work across the stack, from event-driven Java backends to interactive React interfaces. My projects include streaming market data, risk analysis for <strong>1,200+ World Heritage sites</strong>, and language model alignment. I enjoy turning complex data and systems into useful, reliable software.</p>
+    </section>
 
-    <!-- About Section -->
-    <section id="about" class="about section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2 class="alt-heading">About Me</h2>
-        <p class="text-center">  I'm a Senior majoring in Computer Science at Virginia Tech, passionate about software development and continuously learning new technologies. I'm currently focused on building real-world projects, solving coding challenges, and growing as a developer.</p>
-      </div><!-- End Section Title -->
-      <div class="tech-desc">
-        <h2 class="text-center" data-aos="fade-up"> Tech Stack</h2>
-        <p class="tech-desc text-center" data-aos="fade-up">Core programming languages and web technologies</p>
+    <section id="education" class="reveal" aria-labelledby="education-title">
+      <h2 id="education-title">Education</h2>
+      <div class="resume-list">
+        <details class="resume-item">
+          <summary><span class="resume-logo resume-logo-image logo-vt" aria-hidden="true"><img src="assets/virginia-tech-transparent.svg" alt="" width="206" height="98" loading="lazy"></span><span class="resume-info"><span class="resume-heading"><span class="resume-name">Virginia Tech <svg class="icon chevron" aria-hidden="true"><use href="#i-chevron"/></svg></span><span class="resume-meta">August 2022 – May 2026</span></span><span class="resume-role">Bachelor of Science in Computer Science</span></span></summary>
+          <div class="resume-details"><p>Blacksburg, Virginia. Technical foundations in data structures and algorithms, object-oriented programming, database design, distributed systems, and concurrency.</p></div>
+        </details>
       </div>
+    </section>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4 justify-content-center">
-                  <div class="tech-grid">
-            <div class="tech-item">
-                <div class="tech-icon java">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-                    <path fill="#5382a1" d="M12.7 23.56s-1.07.622.761.833a16 16 0 0 0 5.8-.246a10 10 0 0 0 1.539.753c-5.481 2.349-12.405-.136-8.1-1.339m-.674-3.067s-1.2.888.633 1.078a22.6 22.6 0 0 0 7.481-.359a3.3 3.3 0 0 0 1.152.7c-6.627 1.938-14.009.153-9.266-1.421" />
-                    <path fill="#e76f00" d="M17.673 15.294a2.05 2.05 0 0 1-.355 2.954s3.429-1.77 1.854-3.987c-1.471-2.067-2.6-3.095 3.508-6.636c0 0-9.586 2.394-5.007 7.669" />
-                    <path fill="#5382a1" d="M24.922 25.827s.792.652-.872 1.157c-3.164.958-13.168 1.248-15.948.038c-1-.435.874-1.038 1.464-1.164a3.8 3.8 0 0 1 .966-.108c-1.111-.783-7.181 1.537-3.083 2.2c11.176 1.812 20.372-.816 17.473-2.124m-11.711-8.508s-5.089 1.209-1.8 1.648a38 38 0 0 0 6.731-.072a53 53 0 0 0 4.221-.555a9 9 0 0 0-1.28.685c-5.17 1.358-15.153.726-12.283-.665a9.6 9.6 0 0 1 4.407-1.042m9.133 5.104c5.253-2.73 2.824-5.353 1.129-5a4 4 0 0 0-.6.161a.96.96 0 0 1 .449-.346c3.354-1.179 5.933 3.478-1.083 5.322a.5.5 0 0 0 .106-.138" />
-                    <path fill="#e76f00" d="M19.172 1.906s2.909 2.91-2.759 7.386c-4.546 3.59-1.037 5.637 0 7.975c-2.653-2.394-4.6-4.5-3.294-6.463c1.917-2.879 7.229-4.275 6.056-8.9" />
-                    <path fill="#5382a1" d="M13.727 29.818c5.042.323 12.786-.179 12.969-2.565c0 0-.353.9-4.167 1.623a41.5 41.5 0 0 1-12.76.2s.645.533 3.959.746" />
-                  </svg>
-                </div>
-                <h3 class="tech-name">Java</h3>
-            </div>
-            
-            <div class="tech-item">
-                <div class="tech-icon python">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-                    <defs>
-                      <linearGradient id="vscodeIconsFileTypePython0" x1="-133.268" x2="-133.198" y1="-202.91" y2="-202.84" gradientTransform="matrix(189.38 0 0 189.81 25243.061 38519.17)" gradientUnits="userSpaceOnUse">
-                        <stop offset="0" stop-color="#387eb8" />
-                        <stop offset="1" stop-color="#366994" />
-                      </linearGradient>
-                      <linearGradient id="vscodeIconsFileTypePython1" x1="-133.575" x2="-133.495" y1="-203.203" y2="-203.133" gradientTransform="matrix(189.38 0 0 189.81 25309.061 38583.42)" gradientUnits="userSpaceOnUse">
-                        <stop offset="0" stop-color="#ffe052" />
-                        <stop offset="1" stop-color="#ffc331" />
-                      </linearGradient>
-                    </defs>
-                    <path fill="url(#vscodeIconsFileTypePython0)" d="M15.885 2.1c-7.1 0-6.651 3.07-6.651 3.07v3.19h6.752v1H6.545S2 8.8 2 16.005s4.013 6.912 4.013 6.912H8.33v-3.361s-.13-4.013 3.9-4.013h6.762s3.772.06 3.772-3.652V5.8s.572-3.712-6.842-3.712Zm-3.732 2.137a1.214 1.214 0 1 1-1.183 1.244v-.02a1.214 1.214 0 0 1 1.214-1.214Z" />
-                    <path fill="url(#vscodeIconsFileTypePython1)" d="M16.085 29.91c7.1 0 6.651-3.08 6.651-3.08v-3.18h-6.751v-1h9.47S30 23.158 30 15.995s-4.013-6.912-4.013-6.912H23.64V12.4s.13 4.013-3.9 4.013h-6.765S9.2 16.356 9.2 20.068V26.2s-.572 3.712 6.842 3.712h.04Zm3.732-2.147A1.214 1.214 0 1 1 21 26.519v.03a1.214 1.214 0 0 1-1.214 1.214z" />
-                  </svg>
-                </div>
-                <h3 class="tech-name">Python</h3>
-            </div>
-            
-            <div class="tech-item">
-                <div class="tech-icon javascript">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-                    <path fill="#f5de19" d="M2 2h28v28H2z" />
-                    <path d="M20.809 23.875a2.87 2.87 0 0 0 2.6 1.6c1.09 0 1.787-.545 1.787-1.3c0-.9-.716-1.222-1.916-1.747l-.658-.282c-1.9-.809-3.16-1.822-3.16-3.964c0-1.973 1.5-3.476 3.853-3.476a3.89 3.89 0 0 1 3.742 2.107L25 18.128A1.79 1.79 0 0 0 23.311 17a1.145 1.145 0 0 0-1.259 1.128c0 .789.489 1.109 1.618 1.6l.658.282c2.236.959 3.5 1.936 3.5 4.133c0 2.369-1.861 3.667-4.36 3.667a5.06 5.06 0 0 1-4.795-2.691Zm-9.295.228c.413.733.789 1.353 1.693 1.353c.864 0 1.41-.338 1.41-1.653v-8.947h2.631v8.982c0 2.724-1.6 3.964-3.929 3.964a4.085 4.085 0 0 1-3.947-2.4Z" />
-                  </svg>
-                </div>
-                <h3 class="tech-name">JavaScript</h3>
-            </div>
-            
-            <div class="tech-item">
-                <div class="tech-icon c">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-                    <path fill="#005f91" d="M23 19.418a6.971 6.971 0 1 1-.05-6.918l6.093-3.509a14 14 0 1 0 .036 13.95Z" />
-                  </svg>
-                </div>
-                <h3 class="tech-name">C</h3>
-            </div>
-            
-            <div class="tech-item">
-                <div class="tech-icon html">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-                    <path fill="#e44f26" d="M5.902 27.201L3.655 2h24.69l-2.25 25.197L15.985 30z" />
-                    <path fill="#f1662a" d="m16 27.858l8.17-2.265l1.922-21.532H16z" />
-                    <path fill="#ebebeb" d="M16 13.407h-4.09l-.282-3.165H16V7.151H8.25l.074.83l.759 8.517H16zm0 8.027l-.014.004l-3.442-.929l-.22-2.465H9.221l.433 4.852l6.332 1.758l.014-.004z" />
-                    <path fill="#fff" d="M15.989 13.407v3.091h3.806l-.358 4.009l-3.448.93v3.216l6.337-1.757l.046-.522l.726-8.137l.076-.83zm0-6.256v3.091h7.466l.062-.694l.141-1.567l.074-.83z" />
-                  </svg>
-                </div>
-                <h3 class="tech-name">HTML</h3>
-            </div>
-            
-            <div class="tech-item">
-                <div class="tech-icon css">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-                    <path fill="#1572b6" d="M5.902 27.201L3.656 2h24.688l-2.249 25.197L15.985 30z" />
-                    <path fill="#33a9dc" d="m16 27.858l8.17-2.265l1.922-21.532H16z" />
-                    <path fill="#fff" d="M16 13.191h4.09l.282-3.165H16V6.935h7.75l-.074.829l-.759 8.518H16z" />
-                    <path fill="#ebebeb" d="m16.019 21.218l-.014.004l-3.442-.93l-.22-2.465H9.24l.433 4.853l6.331 1.758l.015-.004z" />
-                    <path fill="#fff" d="m19.827 16.151l-.372 4.139l-3.447.93v3.216l6.336-1.756l.047-.522l.537-6.007z" />
-                    <path fill="#ebebeb" d="M16.011 6.935v3.091H8.545l-.062-.695l-.141-1.567l-.074-.829zM16 13.191v3.091h-3.399l-.062-.695l-.14-1.567l-.074-.829z" />
-                  </svg>
-                </div>
-                <h3 class="tech-name">CSS</h3>
-            </div>
-        </div>
-
-        </div>
-
+    <section id="certifications" class="reveal" aria-labelledby="certifications-title">
+      <h2 id="certifications-title">Certifications</h2>
+      <div class="resume-list">
+        <details class="resume-item">
+          <summary><span class="resume-logo resume-logo-image logo-hikima" aria-hidden="true"><img src="assets/hikima-academy.png" alt="" width="500" height="180" loading="lazy"></span><span class="resume-info"><span class="resume-heading"><span class="resume-name">Hikima Academy <svg class="icon chevron" aria-hidden="true"><use href="#i-chevron"/></svg></span><span class="resume-meta">2024</span></span><span class="resume-role">IT Fast-Track Program · Paid program</span></span></summary>
+          <div class="resume-details"><p>A paid, 16-week professional program focused on scalable systems and technical career preparation.</p></div>
+        </details>
       </div>
+    </section>
 
-    </section><!-- /About Section -->
-
-    
-
-
-
- 
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section alt-section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2 class="alt-heading">Featured Projects</h2>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-          <div class="row" data-aos="zoom-in-up" data-aos-delay="200">
-            <div class="col-md-3 col-sm-6">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" 
-                    src="assets/img/UNESCO.png" 
-                    alt="Project Screenshot" 
-                    style="height: 225px; width: 100%; object-fit: cover;">
-                     <div class="card-body">
-                        <h5 class="text-uppercase text-center fw-bold mb-2" style="color: var(--project-text-color);">
-                          UNESCO: Risk Analysis 
-                        </h5>
-                        <!-- <div class="tech-badges mb-3">
-                          <span class="badge badge-nextjs">Next.js</span>
-                          <span class="badge badge-typescript">TypeScript</span>
-                          <span class="badge badge-python">Python</span>
-                          <span class="badge badge-fastapi">FastAPI</span>
-                          <span class="badge badge-cesiumjs">CesiumJS</span>
-                        </div> -->
-                  <p class="card-text">A full-stack web app to analyze risk factors affecting UNESCO World Heritage Sites. Features an interactive 3D globe, advanced search and filters, and aggregated risk summaries by site and country using climate, conflict, and environmental data.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <a href="https://drive.google.com/file/d/1iESvYMLGbhJDQgFsvrL7arj55JRIppx9/view?usp=sharing" target="_blank" class="btn btn-sm rounded-pill custom-solid-btn">
-                        <i class="bi bi-youtube"></i> Demo
-                      </a>
-                      <!-- <a href="https://github.com/Demi-Omoremi/UNESCO-Risk-Analysis" target="_blank" class="btn btn-sm btn-outline-danger rounded-pill custom-btn">
-                        <i class="bi bi-github"></i> Code
-                      </a> -->
-                    </div>
-                    <small class="text-muted"></small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" 
-                    src="assets/img/Receipt Scanner.png" 
-                    alt="Project Screenshot" 
-                    style="height: 225px; width: 100%; object-fit: cover;">
-                     <div class="card-body">
-                        <h5 class="text-uppercase text-center fw-bold mb-2" style="color: var(--project-text-color);">
-                          Receipt Scanner
-                        </h5>
-                        <!-- <div class="tech-badges mb-3">
-                            <span class="badge badge-nextjs">Next.js</span>
-                            <span class="badge badge-python">Python</span>
-                            <span class="badge badge-flask">Flask</span>
-                            <span class="badge badge-ocr">OCR</span>
-                        </div> -->
-                  <p class="card-text">A web application designed to digitize grocery receipts and assist with meal planning. This platform provides receipt image processing, ingredient extraction, and personalized recipe recommendations through an intuitive and responsive user interface.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <a href="https://youtu.be/4r62zAA_Ndw?si=M1DVvnGegJSDhWnAe" target="_blank" class="btn btn-sm rounded-pill custom-solid-btn">
-                        <i class="bi bi-youtube"></i> Demo
-                      </a>
-                      <!-- <a href="https://github.com/Demi-Omoremi/Receipt-Scanner" target="_blank" class="btn btn-sm btn-outline-danger rounded-pill custom-btn">
-                        <i class="bi bi-github"></i> Code
-                      </a> -->
-                    </div>
-                    <small class="text-muted"></small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" 
-                    src="assets/img/LLM-Grey.png" 
-                    alt="Project Screenshot" 
-                    style="height: 225px; width: 100%; object-fit: cover;">
-                    
-                     <div class="card-body">
-                        <h5 class="text-uppercase text-center fw-bold mb-2" style="color: var(--project-text-color);">
-                          LLM Alignment Study
-                        </h5>
-
-                        <!-- <div class="tech-badges mb-3">
-                          <span class="badge badge-python">Python</span>
-                          <span class="badge badge-pytorch">PyTorch</span>
-                          <span class="badge badge-transformers">Transformers</span>
-                          <span class="badge badge-lora">LoRA</span>
-                          <span class="badge badge-peft">PEFT</span>
-                        </div> -->
-                  <p class="card-text">LLM alignment project comparing Supervised Fine-Tuning (SFT) and DPO/RLHF. Combines instruction and code datasets, builds training pipelines, and evaluates model behavior, instruction following, and response quality.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <a href="https://github.com/lakshya46jain/instruction-vs-preference-alignment" target="_blank" class="btn btn-sm rounded-pill custom-solid-btn">
-                        <i class="bi bi-github"></i> Code
-                      </a>
-                    </div>
-                    <small class="text-muted"></small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" 
-                    src="assets/img/ScreenTimeApp-Live.png" 
-                    alt="Project Screenshot" 
-                    style="height: 225px; width: 100%; object-fit: cover;">
-                     <div class="card-body">
-                        <h5 class="text-uppercase text-center fw-bold mb-2" style="color: var(--project-text-color);">
-                          Screen Time (IOS APP)
-                        </h5>
-                        <!-- <div class="tech-badges mb-3">
-                          <span class="badge badge-swift">Swift</span>
-                          <span class="badge badge-swiftui">SwiftUI</span>
-                          <span class="badge badge-coredata">Core Data</span>
-                        </div> -->
-                  <p class="card-text">A native iOS application designed to support screen time regulation for students and parental monitoring. This app provides app usage tracking, configurable limits, focus timers, and persistent local data storage to encourage healthier digital habits.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-
-                      <a href="https://github.com/Demi-Omoremi/ScreenTime-iOS" target="_blank" class="btn btn-sm rounded-pill custom-solid-btn">
-                        <i class="bi bi-github"></i> Code
-                      </a>
-                    </div>
-                    <small class="text-muted"></small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            
-            
-            
-
-           
-
-          </div><!-- End Portfolio Container -->
-
-        </div>
-
-      <!-- </div> -->
-
-    </section><!-- /Portfolio Section -->
-
-   <!-- Resume Section -->
-
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2 class="alt-heading">Contact Me</h2>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-5">
-
-            <div class="info-wrap">
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                <a href="https://www.linkedin.com/in/demi-omoremi-201661367/" target="_blank">
-                  <i class="bi bi-linkedin flex-shrink-0"></i>
-                </a>
-                <div>
-                  <h3>Linkedln</h3>
-                  <p><a href="https://www.linkedin.com/in/demi-omoremi-201661367/" target="_blank">Demi-Omoremi</a></p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                <a href="https://github.com/Demi-Omoremi" target="_blank">
-                  <i class="bi bi-github flex-shrink-0"></i>
-                </a>
-                <div>
-                    <h3>Github</h3>
-                  <p><a href="https://github.com/Demi-Omoremi" target="_blank">Demi-Omoremi</a></p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                <a href="mailto:demiomoremi@gmail.com">
-                  <i class="bi bi-envelope flex-shrink-0"></i>
-                </a>
-                <div>
-                  <h3>Email</h3>
-                  <p><a href="mailto:demiomoremi@gmail.com">demiomoremi@gmail.com</a></p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                <a href="https://app.joinhandshake.com/profiles/wx9eah" target="_blank">
-                  <i class="bi bi-h-square flex-shrink-0"></i>
-                </a>  
-                <div>
-                  <h3>Handshake</h3>
-                  <p><a href="https://app.joinhandshake.com/profiles/wx9eah" target="_blank">Demi-Omoremi</a></p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus" frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
-            </div>
-          </div>
-
-          <div class="col-lg-7">
-            <form action="https://formspree.io/f/xpwrdvbv" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-              <div class="row gy-4">
-
-                <div class="col-md-6">
-                  <label for="name-field" class="pb-2">Your Name</label>
-                  <input type="text" name="name" id="name-field" class="form-control" required="">
-                </div>
-
-                <div class="col-md-6">
-                  <label for="email-field" class="pb-2">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email-field" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <label for="subject-field" class="pb-2">Subject</label>
-                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <label for="message-field" class="pb-2">Message</label>
-                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
-                </div>
-
-              </div>
-            </form>
-          </div><!-- End Contact Form -->
-
-        </div>
-
+    <section id="skills" class="reveal" aria-labelledby="skills-title">
+      <h2 id="skills-title">Technical Skills</h2>
+      <div class="skill-tags">
+        <span class="skill" tabindex="0" role="img" aria-label="Java"><img class="skill-icon" src="assets/skills/java.svg" alt="" width="20" height="20" loading="lazy"><span class="skill-label" aria-hidden="true">Java</span></span>
+        <span class="skill" tabindex="0" role="img" aria-label="Python"><img class="skill-icon" src="assets/skills/python.svg" alt="" width="20" height="20" loading="lazy"><span class="skill-label" aria-hidden="true">Python</span></span>
+        <span class="skill" tabindex="0" role="img" aria-label="TypeScript"><img class="skill-icon" src="assets/skills/typescript.svg" alt="" width="20" height="20" loading="lazy"><span class="skill-label" aria-hidden="true">TypeScript</span></span>
+        <span class="skill" tabindex="0" role="img" aria-label="JavaScript"><img class="skill-icon" src="assets/skills/javascript.svg" alt="" width="20" height="20" loading="lazy"><span class="skill-label" aria-hidden="true">JavaScript</span></span>
+        <span class="skill" tabindex="0" role="img" aria-label="C"><img class="skill-icon" src="assets/skills/c.svg" alt="" width="20" height="20" loading="lazy"><span class="skill-label sr-only" aria-hidden="true">C</span></span>
+        <span class="skill" tabindex="0" role="img" aria-label="React"><img class="skill-icon skill-icon-light" src="assets/skills/react-light.svg" alt="" width="20" height="20" loading="lazy"><img class="skill-icon skill-icon-dark" src="assets/skills/react-dark.svg" alt="" width="20" height="20" loading="lazy"><span class="skill-label" aria-hidden="true">React</span></span>
+        <span class="skill" tabindex="0" role="img" aria-label="Next.js"><img class="skill-icon" src="assets/skills/next-js.svg" alt="" width="20" height="20" loading="lazy"><span class="skill-label" aria-hidden="true">Next.js</span></span>
+        <span class="skill" tabindex="0" role="img" aria-label="Spring Boot"><img class="skill-icon" src="assets/skills/spring.svg" alt="" width="20" height="20" loading="lazy"><span class="skill-label" aria-hidden="true">Spring Boot</span></span>
+        <span class="skill" tabindex="0" role="img" aria-label="FastAPI"><img class="skill-icon" src="assets/skills/fastapi.svg" alt="" width="20" height="20" loading="lazy"><span class="skill-label" aria-hidden="true">FastAPI</span></span>
+        <span class="skill" tabindex="0" role="img" aria-label="Flask"><img class="skill-icon skill-icon-light" src="assets/skills/flask-light.svg" alt="" width="20" height="20" loading="lazy"><img class="skill-icon skill-icon-dark" src="assets/skills/flask-dark.svg" alt="" width="20" height="20" loading="lazy"><span class="skill-label" aria-hidden="true">Flask</span></span>
+        <span class="skill" tabindex="0" role="img" aria-label="Node.js"><img class="skill-icon" src="assets/skills/node-js.svg" alt="" width="20" height="20" loading="lazy"><span class="skill-label" aria-hidden="true">Node.js</span></span>
+        <span class="skill" tabindex="0" role="img" aria-label="Kafka"><img class="skill-icon skill-icon-light" src="assets/skills/apache-kafka-light.svg" alt="" width="20" height="20" loading="lazy"><img class="skill-icon skill-icon-dark" src="assets/skills/apache-kafka-dark.svg" alt="" width="20" height="20" loading="lazy"><span class="skill-label" aria-hidden="true">Kafka</span></span>
+        <span class="skill" tabindex="0" role="img" aria-label="PostgreSQL"><img class="skill-icon" src="assets/skills/postgresql.svg" alt="" width="20" height="20" loading="lazy"><span class="skill-label" aria-hidden="true">PostgreSQL</span></span>
+        <span class="skill" tabindex="0" role="img" aria-label="MySQL"><img class="skill-icon skill-icon-light" src="assets/skills/mysql-light.svg" alt="" width="20" height="20" loading="lazy"><img class="skill-icon skill-icon-dark" src="assets/skills/mysql-dark.svg" alt="" width="20" height="20" loading="lazy"><span class="skill-label" aria-hidden="true">MySQL</span></span>
+        <span class="skill" tabindex="0" role="img" aria-label="Docker"><img class="skill-icon" src="assets/skills/docker.svg" alt="" width="20" height="20" loading="lazy"><span class="skill-label" aria-hidden="true">Docker</span></span>
+        <span class="skill" tabindex="0" role="img" aria-label="AWS"><img class="skill-icon skill-icon-light" src="assets/skills/amazon-web-services-light.svg" alt="" width="20" height="20" loading="lazy"><img class="skill-icon skill-icon-dark" src="assets/skills/amazon-web-services-dark.svg" alt="" width="20" height="20" loading="lazy"><span class="skill-label sr-only" aria-hidden="true">AWS</span></span>
+        <span class="skill" tabindex="0" role="img" aria-label="Git"><img class="skill-icon" src="assets/skills/git.svg" alt="" width="20" height="20" loading="lazy"><span class="skill-label" aria-hidden="true">Git</span></span>
+        <span class="skill" tabindex="0" role="img" aria-label="Hugging Face"><img class="skill-icon" src="assets/skills/hugging-face.svg" alt="" width="20" height="20" loading="lazy"><span class="skill-label" aria-hidden="true">Hugging Face</span></span>
       </div>
+    </section>
 
-    </section><!-- /Contact Section -->
+    <section id="projects" aria-labelledby="projects-title">
+      <h2 id="projects-title" class="section-title reveal">My Projects</h2>
+      <div class="project-list">
+        <article class="project-card reveal" aria-labelledby="apex-title">
+          <div class="project-content"><h3 id="apex-title">Apex Monitor</h3><p>A real-time market monitoring platform with streaming stock prices, interactive historical charts, and customizable price alerts.</p><div class="project-tags"><span>Java</span><span>Spring Boot</span><span>Kafka</span><span>PostgreSQL</span><span>Next.js</span><span>Docker</span></div><div class="project-links"><a class="button button-outline" href="https://github.com/Demi-Omoremi/Apex-Monitor" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a><a class="button button-primary" href="https://youtu.be/wlHnguhEu6A" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg>Demo</a></div></div>
+          <a class="project-preview" href="https://youtu.be/wlHnguhEu6A" target="_blank" rel="noopener" aria-label="Watch the Apex Monitor demo"><img src="assets/apex-monitor.jpg" alt="Screenshot of Demi's Apex Monitor application from its video demonstration" width="1280" height="720" loading="lazy"></a>
+        </article>
+        <article class="project-card reveal" aria-labelledby="heritage-title">
+          <div class="project-content"><h3 id="heritage-title">World Heritage Risk Watch</h3><p>An interactive 3D globe exploring climate, conflict, and environmental risks across 1,200+ UNESCO World Heritage sites.</p><div class="project-tags"><span>Python</span><span>FastAPI</span><span>Next.js</span><span>TypeScript</span><span>CesiumJS</span></div><div class="project-links"><a class="button button-primary" href="https://drive.google.com/file/d/1iESvYMLGbhJDQgFsvrL7arj55JRIppx9/view?usp=sharing" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg>Demo</a></div></div>
+          <a class="project-preview" href="https://drive.google.com/file/d/1iESvYMLGbhJDQgFsvrL7arj55JRIppx9/view?usp=sharing" target="_blank" rel="noopener" aria-label="Watch the World Heritage Risk Watch demo"><img src="assets/heritage-demo.jpg" alt="Preview from the World Heritage Risk Watch video demo" width="1280" height="720" loading="lazy"></a>
+        </article>
+        <article class="project-card reveal" aria-labelledby="receipt-title">
+          <div class="project-content"><h3 id="receipt-title">Receipt Scanner & Recipes</h3><p>A webcam receipt scanner that turns grocery purchases into a digital pantry, personalized recipes, and nutritional insights.</p><div class="project-tags"><span>Python</span><span>Flask</span><span>OCR</span><span>Next.js</span><span>TypeScript</span></div><div class="project-links"><a class="button button-primary" href="https://youtu.be/4r62zAA_Ndw?si=xKTMIDBVlRwIRC93" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg>Demo</a></div></div>
+          <a class="project-preview" href="https://youtu.be/4r62zAA_Ndw?si=xKTMIDBVlRwIRC93" target="_blank" rel="noopener" aria-label="Watch the Receipt Scanner &amp; Recipes demo"><img src="assets/receipt-scanner.png" alt="Project Munch showing a recipe recommendation generated from scanned grocery ingredients" width="461" height="387" loading="lazy"></a>
+        </article>
+        <article class="project-card reveal" aria-labelledby="alignment-title">
+          <div class="project-content"><h3 id="alignment-title">Instruction vs. Preference Alignment</h3><p>A group research project comparing SFT, DPO, and hybrid approaches to language model alignment using LoRA on TinyLlama.</p><div class="project-tags"><span>Python</span><span>PyTorch</span><span>Hugging Face</span><span>LoRA</span><span>PEFT</span></div><div class="project-links"><a class="button button-outline" href="https://github.com/lakshya46jain/instruction-vs-preference-alignment" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a></div></div>
+          <div class="project-preview diagram-preview"><img src="assets/alignment-diagram.svg" alt="Research architecture illustration comparing SFT, DPO, and hybrid SFT plus DPO training paths" width="480" height="320" loading="lazy"></div>
+        </article>
+      </div>
+    </section>
 
+    <section id="contact" aria-labelledby="contact-title" class="reveal">
+      <h2 id="contact-title" class="section-title">Get in Touch</h2>
+      <p class="contact-intro">Have a role, project, or interesting problem in mind?<br>Contact me at <a href="mailto:demiomoremi@gmail.com">demiomoremi@gmail.com</a> or compose a message below.</p>
+      <form id="contact-form">
+        <label class="sr-only" for="sender-email">Your email</label>
+        <input id="sender-email" name="email" type="email" placeholder="Your email" autocomplete="email" required maxlength="254">
+        <label class="sr-only" for="message">Your message</label>
+        <textarea id="message" name="message" placeholder="Your message" required minlength="10" maxlength="4000" rows="7"></textarea>
+        <button class="send-button" type="submit">Submit <svg class="icon" aria-hidden="true"><use href="#i-send"/></svg></button>
+        <p id="form-status" class="sr-only" role="status"></p>
+      </form>
+    </section>
   </main>
 
-  <footer id="footer" class="footer position-relative">
-
-    <div class="container">
-      <div class="copyright text-center icon-row ">
-        <a href="https://github.com/Demi-Omoremi" target="_blank" class="icon-link"><i class="bi bi-github flex-shrink-0"></i></a>
-        <a href="https://www.linkedin.com/in/demi-omoremi-201661367/" target="_blank" class="icon-link"><i class="bi bi-linkedin"></i></a>
-        <a href="mailto:demiomoremi@gmail.com" target="_blank" class="icon-link"><i class="bi bi-envelope"></i></a>
-        <a href="https://app.joinhandshake.com/profiles/wx9eah" target="_blank" class="icon-link"><i class="bi bi-h-square"></i></a>
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-      </div>
-    </div>
-
-  </footer>
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+  <div class="dock-backdrop" aria-hidden="true"></div>
+  <nav class="dock" aria-label="Main navigation">
+    <div class="dock-item"><a class="dock-control" href="#hero" aria-label="Home"><svg class="icon" aria-hidden="true"><use href="#i-home"/></svg></a><span class="tooltip" aria-hidden="true">Home</span></div>
+    <div class="dock-item"><a class="dock-control" href="#projects" aria-label="Projects"><svg class="icon" aria-hidden="true"><use href="#i-folder"/></svg></a><span class="tooltip" aria-hidden="true">Projects</span></div>
+    <span class="dock-divider" aria-hidden="true"></span>
+    <div class="dock-item"><a class="dock-control" href="https://github.com/Demi-Omoremi" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg></a><span class="tooltip" aria-hidden="true">GitHub</span></div>
+    <div class="dock-item"><a class="dock-control" href="https://linkedin.com/in/demiomoremi" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg></a><span class="tooltip" aria-hidden="true">LinkedIn</span></div>
+    <div class="dock-item"><a class="dock-control" href="#contact" aria-label="Contact"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></a><span class="tooltip" aria-hidden="true">Contact</span></div>
+    <span class="dock-divider" aria-hidden="true"></span>
+    <div class="dock-item"><button id="theme" class="dock-control" type="button" aria-label="Switch to dark theme"><svg class="icon sun-icon" aria-hidden="true"><use href="#i-sun"/></svg><svg class="icon moon-icon" aria-hidden="true"><use href="#i-moon"/></svg></button><span class="tooltip theme-tooltip" aria-hidden="true">Change theme</span></div>
+  </nav>
 </body>
-
 </html>
